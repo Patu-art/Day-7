@@ -3,84 +3,129 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101412">
-  <meta name="description" content="Hetherington's, Pollard Street, New Islington — local pints, sport and good company.">
+  <meta name="theme-color" content="#17211b">
+  <meta name="description" content="Hetherington's, Pollard Street, New Islington — a relaxed local pub and cafe bar for pints, sport and good company.">
   <title>Hetherington's — Pollard Street, Manchester</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
-  <header class="site-header">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
     <a class="brand" href="#top" aria-label="Hetherington's home">
-      <img src="assets/icons/h-mark.svg" alt="" width="42" height="42">
-      <span><strong>HETHERINGTON'S</strong><small>POLLARD STREET · MANCHESTER</small></span>
+      <img src="assets/icons/h-mark.svg" alt="" width="46" height="46">
+      <span class="brand-wordmark">
+        <strong>Hetherington's</strong>
+        <small>Pollard Street · New Islington</small>
+      </span>
     </a>
-    <button class="menu-toggle" aria-expanded="false" aria-controls="nav"><span></span><span></span><b class="sr-only">Menu</b></button>
-    <nav id="nav">
-      <a href="#about">About</a>
+
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav" aria-label="Toggle menu">
+      <span></span><span></span>
+    </button>
+
+    <nav id="nav" aria-label="Primary navigation">
+      <a href="#local">The Local</a>
       <a href="#sport">Sport</a>
       <a href="#hours">Hours</a>
-      <a href="#visit" class="nav-cta">Visit</a>
+      <a href="#visit" class="nav-cta">Find us</a>
     </nav>
   </header>
 
-  <main>
+  <main id="main">
     <section class="hero" id="top">
-      <div class="hero-copy reveal">
-        <p class="eyebrow">NEW ISLINGTON · MANCHESTER</p>
-        <h1>YOUR LOCAL.<br><em>YOUR MATCH.</em></h1>
-        <p class="hero-text">A Pollard Street spot for pints, sport and good company.</p>
+      <div class="hero-text reveal">
+        <div class="pub-kicker"><span></span> NEW ISLINGTON · MANCHESTER</div>
+        <h1>A proper local<br><em>for Pollard Street.</em></h1>
+        <p class="hero-lead">A relaxed neighbourhood cafe bar for a pint, a catch-up and the game.</p>
         <div class="hero-actions">
-          <a href="#visit" class="button button-primary">Find us</a>
-          <a href="#hours" class="button button-ghost">Opening hours</a>
+          <a class="button button-solid" href="#visit">Find Hetherington's</a>
+          <a class="button button-outline" href="#hours">See opening hours</a>
+        </div>
+        <div class="hero-facts" aria-label="Venue highlights">
+          <span>Sports TV</span>
+          <span>Dog friendly</span>
+          <span>New Islington</span>
         </div>
       </div>
 
-      <div class="hero-art reveal" aria-hidden="true">
-        <img src="assets/images/pollard-poster.svg" alt="">
-      </div>
+      <aside class="house-board reveal" aria-label="Hetherington's house board">
+        <div class="board-pin board-pin-a"></div>
+        <div class="board-pin board-pin-b"></div>
+        <p class="board-small">HETHERINGTON'S · MCR</p>
+        <div class="board-title">THE<br>LOCAL</div>
+        <div class="board-rule"></div>
+        <div class="board-row"><span>Today</span><strong data-open-status>Checking…</strong></div>
+        <div class="board-row"><span>Manchester</span><strong data-local-time>--:--</strong></div>
+        <div class="board-rule"></div>
+        <p class="board-copy">PINTS · SPORT · GOOD COMPANY</p>
+      </aside>
 
-      <div class="hero-status reveal">
-        <div><span>Manchester time</span><strong data-local-time>--:--</strong></div>
-        <div><span>Today</span><strong data-open-status>Checking…</strong></div>
-      </div>
+      <div class="coaster coaster-one" aria-hidden="true">H</div>
+      <div class="coaster coaster-two" aria-hidden="true">MCR</div>
     </section>
 
-    <div class="ticker" aria-hidden="true">
-      <div>PINTS · SPORT · POLLARD STREET · NEW ISLINGTON · GOOD COMPANY · PINTS · SPORT · POLLARD STREET · NEW ISLINGTON · GOOD COMPANY ·</div>
+    <div class="pub-strip" aria-hidden="true">
+      <div>8 POLLARD STREET · SPORTS TV · DOG FRIENDLY · NEW ISLINGTON · 8 POLLARD STREET · SPORTS TV · DOG FRIENDLY · NEW ISLINGTON ·</div>
     </div>
 
-    <section class="about section" id="about">
-      <div class="section-label">THE LOCAL</div>
-      <div class="section-copy reveal">
-        <h2>A neighbourhood bar,<br>not a chain.</h2>
-        <p>Hetherington's sits on Pollard Street in New Islington — a relaxed local for a drink, a catch-up and the game.</p>
+    <section class="local section" id="local">
+      <div class="section-intro reveal">
+        <span class="section-tag">THE LOCAL</span>
+        <h2>Warm, easy-going,<br><em>and properly local.</em></h2>
+        <p>Hetherington's sits on Pollard Street in New Islington. The feel is simple: a neighbourhood bar where sport can be on without the place turning into a loud theme bar.</p>
       </div>
-      <div class="about-cards reveal">
-        <article><img src="assets/icons/pint.svg" alt=""><strong>Drinks</strong><span>Easy-going local atmosphere</span></article>
-        <article><img src="assets/icons/tv.svg" alt=""><strong>Sport</strong><span>Sports TV at the venue</span></article>
-        <article><img src="assets/icons/dog.svg" alt=""><strong>Dog friendly</strong><span>Four-legged locals welcome</span></article>
+
+      <div class="feature-grid reveal">
+        <article class="feature-card feature-card-dark">
+          <span class="feature-number">01</span>
+          <img src="assets/icons/pint.svg" alt="" width="44" height="44">
+          <h3>Come for a drink</h3>
+          <p>A relaxed local-bar atmosphere rather than a polished chain experience.</p>
+        </article>
+        <article class="feature-card feature-card-cream">
+          <span class="feature-number">02</span>
+          <img src="assets/icons/tv.svg" alt="" width="44" height="44">
+          <h3>Stay for the match</h3>
+          <p>Sports TV is part of the venue, with the pub atmosphere still doing the talking.</p>
+        </article>
+        <article class="feature-card feature-card-red">
+          <span class="feature-number">03</span>
+          <img src="assets/icons/dog.svg" alt="" width="44" height="44">
+          <h3>Bring the dog</h3>
+          <p>Dog-friendly and close to the neighbourhood it serves.</p>
+        </article>
       </div>
     </section>
 
-    <section class="sport section-dark" id="sport">
-      <div class="sport-copy reveal">
-        <p class="eyebrow">MATCHDAY AT HETHERINGTON'S</p>
-        <h2>WATCH THE GAME.<br><em>KEEP THE PUB.</em></h2>
-        <p>Sport is part of the room, not the whole personality. Come for the match and stay for the local atmosphere.</p>
+    <section class="sport" id="sport">
+      <div class="sport-panel reveal">
+        <span class="section-tag section-tag-light">SPORT AT THE LOCAL</span>
+        <h2>The game is on.<br><em>The pub still feels like a pub.</em></h2>
+        <p>Hetherington's currently lists Sports TV. Call ahead if there is a specific fixture you want to catch.</p>
+        <a class="inline-link" href="tel:+441618508554">Call 0161 850 8554 <span>↗</span></a>
       </div>
-      <div class="sport-art reveal">
-        <img src="assets/images/local-poster.svg" alt="Illustrated Hetherington's local poster">
+
+      <div class="pub-sign reveal" aria-hidden="true">
+        <div class="sign-crown">EST. POLLARD ST</div>
+        <div class="sign-main">H</div>
+        <div class="sign-name">HETHERINGTON'S</div>
+        <div class="sign-line">NEW ISLINGTON · MANCHESTER</div>
       </div>
     </section>
 
     <section class="hours section" id="hours">
-      <div class="section-label">OPENING HOURS</div>
-      <div class="hours-title reveal">
-        <h2>WHEN TO<br>DROP IN.</h2>
-        <p>Current public listing hours. Independent venue hours can change.</p>
+      <div class="hours-copy reveal">
+        <span class="section-tag">OPENING HOURS</span>
+        <h2>Drop in<br><em>when we're open.</em></h2>
+        <p>Current public listing hours. Independent venue hours can change, so check directly for special dates.</p>
       </div>
-      <div class="hours-list reveal">
+
+      <div class="hours-card reveal" aria-label="Opening hours">
         <div data-day="1"><span>Monday</span><strong>17:00 — 23:00</strong></div>
         <div data-day="2"><span>Tuesday</span><strong>17:00 — 23:00</strong></div>
         <div data-day="3"><span>Wednesday</span><strong>17:00 — 23:00</strong></div>
@@ -93,24 +138,35 @@
 
     <section class="visit" id="visit">
       <div class="visit-copy reveal">
-        <p class="eyebrow">COME BY</p>
-        <h2>8 POLLARD<br>STREET.</h2>
-        <p>New Islington · Manchester · M4 7DS</p>
+        <span class="section-tag section-tag-light">COME BY</span>
+        <h2>8 Pollard Street,<br><em>New Islington.</em></h2>
+        <p>Manchester · M4 7DS</p>
         <div class="visit-actions">
-          <a class="button button-light" href="https://www.google.com/maps/search/?api=1&query=Hetherington%27s+8+Pollard+Street+Manchester" target="_blank" rel="noopener">Open directions ↗</a>
-          <a class="text-link" href="tel:+441618508554">0161 850 8554</a>
-          <a class="text-link" href="mailto:hetheringtonscafebar@gmail.com">Email venue</a>
+          <a class="button button-cream" href="https://www.google.com/maps/search/?api=1&query=Hetherington%27s+8+Pollard+Street+Manchester" target="_blank" rel="noopener">Open directions ↗</a>
+          <a class="contact-link" href="tel:+441618508554">0161 850 8554</a>
+          <a class="contact-link" href="mailto:hetheringtonscafebar@gmail.com">Email venue</a>
         </div>
       </div>
-      <div class="map-art reveal">
-        <img src="assets/images/manchester-route.svg" alt="Stylised route illustration to Pollard Street">
+
+      <div class="visit-card reveal">
+        <div class="visit-icon"><img src="assets/icons/tram.svg" alt="" width="42" height="42"></div>
+        <span>NEAREST METRO</span>
+        <strong>New Islington</strong>
+        <small>CAMRA lists the venue within roughly 400m of the stop.</small>
+        <div class="visit-rule"></div>
+        <span>ADDRESS</span>
+        <strong>8 Pollard Street</strong>
+        <small>Manchester · M4 7DS</small>
       </div>
     </section>
   </main>
 
   <footer>
-    <strong>HETHERINGTON'S</strong>
-    <span>Pollard Street · New Islington · Manchester</span>
+    <div>
+      <strong>Hetherington's</strong>
+      <span>Pollard Street · New Islington · Manchester</span>
+    </div>
+    <a href="#top">Back to top ↑</a>
   </footer>
 </body>
 </html>
