@@ -1,1 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="50" fill="#D88B3D"/><path d="M25 22h16v21h18V22h16v56H59V56H41v22H25z" fill="#101412"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Hetherington's H mark">
+  <circle cx="50" cy="50" r="47" fill="#F2E7D2" stroke="#C8A15D" stroke-width="4"/>
+  <circle cx="50" cy="50" r="38" fill="#17211B" stroke="#7B2631" stroke-width="3"/>
+  <path d="M29 27h13v18h16V27h13v46H58V56H42v17H29z" fill="#F2E7D2"/>
+  <circle cx="50" cy="14" r="2" fill="#C8A15D"/>
+  <circle cx="50" cy="86" r="2" fill="#C8A15D"/>
+</svg>
